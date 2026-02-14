@@ -1,30 +1,42 @@
 import type { Block } from 'payload'
 import { paddingFields, marginFields, colorFields, layoutFields, headingFontSizeFields, fontSizeFields, fontWeightFields, lineHeightFields } from './shared-styling'
 
-export const FAQBlock: Block = {
-  slug: 'faq',
+export const FooterBlock: Block = {
+  slug: 'footer',
   labels: {
-    singular: 'FAQ Block',
-    plural: 'FAQ Blocks',
+    singular: 'Footer Block',
+    plural: 'Footer Blocks',
   },
   fields: [
     {
-      name: 'questions',
+      name: 'footerSections',
       type: 'array',
-      label: 'Questions',
+      label: 'Footer Sections',
       minRows: 1,
       fields: [
         {
-          name: 'question',
+          name: 'title',
           type: 'text',
-          label: 'Question',
-          required: true,
+          label: 'Section Title',
         },
         {
-          name: 'answer',
-          type: 'textarea',
-          label: 'Answer',
-          required: true,
+          name: 'links',
+          type: 'array',
+          label: 'Links',
+          fields: [
+            {
+              name: 'label',
+              type: 'text',
+              label: 'Link Label',
+              required: true,
+            },
+            {
+              name: 'url',
+              type: 'text',
+              label: 'URL',
+              required: true,
+            },
+          ],
         },
       ],
     },
@@ -35,42 +47,35 @@ export const FAQBlock: Block = {
         ...layoutFields,
         ...colorFields,
         {
-          name: 'accentColor',
-          type: 'text',
-          label: 'Accent Color (hex)',
-        },
-        {
-          name: 'borderRadius',
-          type: 'number',
-          label: 'Border Radius (px)',
-          defaultValue: 0,
-        },
-        {
-          name: 'questionStyles',
+          name: 'sectionTitleStyles',
           type: 'group',
-          label: 'Question Styles',
+          label: 'Section Title Styles',
           fields: [
             ...headingFontSizeFields,
             ...fontWeightFields,
             {
-              name: 'questionColor',
+              name: 'sectionTitleColor',
               type: 'text',
-              label: 'Question Color (hex)',
+              label: 'Section Title Color (hex)',
             },
           ],
         },
         {
-          name: 'answerStyles',
+          name: 'linkStyles',
           type: 'group',
-          label: 'Answer Styles',
+          label: 'Link Styles',
           fields: [
             ...fontSizeFields,
             ...fontWeightFields,
-            ...lineHeightFields,
             {
-              name: 'answerColor',
+              name: 'linkColor',
               type: 'text',
-              label: 'Answer Color (hex)',
+              label: 'Link Color (hex)',
+            },
+            {
+              name: 'linkHoverColor',
+              type: 'text',
+              label: 'Link Hover Color (hex)',
             },
           ],
         },

@@ -1,5 +1,5 @@
 import type { Block } from 'payload'
-import { paddingFields, marginFields, colorFields, layoutFields } from './shared-styling'
+import { paddingFields, marginFields, colorFields, layoutFields, headingFontSizeFields, fontSizeFields, fontWeightFields, lineHeightFields } from './shared-styling'
 
 export const IconSectionBlock: Block = {
   slug: 'iconSection',
@@ -62,6 +62,35 @@ export const IconSectionBlock: Block = {
           type: 'number',
           label: 'Gap (px)',
           defaultValue: 24,
+        },
+        {
+          name: 'titleStyles',
+          type: 'group',
+          label: 'Section Title Styles',
+          fields: [
+            ...headingFontSizeFields,
+            ...fontWeightFields,
+            {
+              name: 'titleColor',
+              type: 'text',
+              label: 'Title Color (hex)',
+            },
+          ],
+        },
+        {
+          name: 'descriptionStyles',
+          type: 'group',
+          label: 'Description Styles',
+          fields: [
+            ...fontSizeFields,
+            ...fontWeightFields,
+            ...lineHeightFields,
+            {
+              name: 'descriptionColor',
+              type: 'text',
+              label: 'Description Color (hex)',
+            },
+          ],
         },
         {
           type: 'group',

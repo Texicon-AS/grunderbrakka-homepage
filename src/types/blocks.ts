@@ -259,6 +259,31 @@ export interface StartupCardBlockType {
   textColor?: string
   borderRadius?: number
   hoverEffect?: 'none' | 'scale' | 'shadow' | 'lift'
+  titleStyles?: {
+    headingFontSize?: HeadingFontSizeConfig['headingFontSize']
+    customHeadingFontSize?: number
+    fontWeight?: 'normal' | '400' | '500' | '600' | 'bold' | '700' | '800' | '900'
+    titleColor?: string
+  }
+  descriptionStyles?: {
+    fontSize?: FontSizeConfig['fontSize']
+    customFontSize?: number
+    fontWeight?: 'normal' | '400' | '500' | '600' | 'bold' | '700' | '800' | '900'
+    lineHeight?: '1.0' | '1.2' | '1.4' | '1.5' | '1.6' | '1.8' | '2.0' | 'custom'
+    customLineHeight?: number
+    descriptionColor?: string
+  }
+  logoStyles?: {
+    logoMaxWidth?: number
+    logoMaxHeight?: number
+  }
+  buttonStyles?: {
+    buttonFontSize?: 'sm' | 'base' | 'lg' | 'custom'
+    customButtonFontSize?: number
+    fontWeight?: 'normal' | '400' | '500' | '600' | 'bold' | '700' | '800' | '900'
+    buttonBackgroundColor?: string
+    buttonTextColor?: string
+  }
   spacing?: PaddingConfig & MarginConfig
 }
 
@@ -273,6 +298,34 @@ export interface TestimonialBlockType {
   backgroundColor?: string
   textColor?: string
   quoteColor?: string
+  quoteStyles?: {
+    fontSize?: FontSizeConfig['fontSize']
+    customFontSize?: number
+    fontWeight?: 'normal' | '400' | '500' | '600' | 'bold' | '700' | '800' | '900'
+    lineHeight?: '1.0' | '1.2' | '1.4' | '1.5' | '1.6' | '1.8' | '2.0' | 'custom'
+    customLineHeight?: number
+    quoteTextColor?: string
+  }
+  founderNameStyles?: {
+    headingFontSize?: HeadingFontSizeConfig['headingFontSize']
+    customHeadingFontSize?: number
+    fontWeight?: 'normal' | '400' | '500' | '600' | 'bold' | '700' | '800' | '900'
+    founderNameColor?: string
+  }
+  founderTitleStyles?: {
+    fontSize?: FontSizeConfig['fontSize']
+    customFontSize?: number
+    fontWeight?: 'normal' | '400' | '500' | '600' | 'bold' | '700' | '800' | '900'
+    founderTitleColor?: string
+  }
+  educationStyles?: {
+    fontSize?: FontSizeConfig['fontSize']
+    customFontSize?: number
+    fontWeight?: 'normal' | '400' | '500' | '600' | 'bold' | '700' | '800' | '900'
+    lineHeight?: '1.0' | '1.2' | '1.4' | '1.5' | '1.6' | '1.8' | '2.0' | 'custom'
+    customLineHeight?: number
+    educationColor?: string
+  }
   spacing?: PaddingConfig & MarginConfig
 }
 
@@ -283,9 +336,36 @@ export interface ContactFormBlockType {
   submitButtonText?: string
   layout?: LayoutConfig['layout']
   maxWidth?: number
+  backgroundColor?: string
+  textColor?: string
   formBackgroundColor?: string
-  buttonColor?: string
-  inputBorderColor?: string
+  titleStyles?: {
+    headingFontSize?: HeadingFontSizeConfig['headingFontSize']
+    customHeadingFontSize?: number
+    fontWeight?: 'normal' | '400' | '500' | '600' | 'bold' | '700' | '800' | '900'
+    titleColor?: string
+  }
+  descriptionStyles?: {
+    fontSize?: FontSizeConfig['fontSize']
+    customFontSize?: number
+    fontWeight?: 'normal' | '400' | '500' | '600' | 'bold' | '700' | '800' | '900'
+    lineHeight?: '1.0' | '1.2' | '1.4' | '1.5' | '1.6' | '1.8' | '2.0' | 'custom'
+    customLineHeight?: number
+    descriptionColor?: string
+  }
+  inputStyles?: {
+    inputFontSize?: 'sm' | 'base' | 'lg' | 'custom'
+    customInputFontSize?: number
+    inputBorderColor?: string
+    inputTextColor?: string
+  }
+  buttonStyles?: {
+    buttonFontSize?: 'sm' | 'base' | 'lg' | 'custom'
+    customButtonFontSize?: number
+    fontWeight?: 'normal' | '400' | '500' | '600' | 'bold' | '700' | '800' | '900'
+    buttonColor?: string
+    buttonTextColor?: string
+  }
   spacing?: PaddingConfig & MarginConfig
 }
 
@@ -300,6 +380,32 @@ export interface SimpleTextBlockType {
   maxWidth?: number
   backgroundColor?: string
   textColor?: string
+  headingStyles?: {
+    headingFontSize?: HeadingFontSizeConfig['headingFontSize']
+    customHeadingFontSize?: number
+    fontWeight?: 'normal' | '400' | '500' | '600' | 'bold' | '700' | '800' | '900'
+    headingColor?: string
+  }
+  bodyTextStyles?: {
+    fontSize?: FontSizeConfig['fontSize']
+    customFontSize?: number
+    fontWeight?: 'normal' | '400' | '500' | '600' | 'bold' | '700' | '800' | '900'
+    lineHeight?: '1.0' | '1.2' | '1.4' | '1.5' | '1.6' | '1.8' | '2.0' | 'custom'
+    customLineHeight?: number
+    bodyTextColor?: string
+  }
+  personNameStyles?: {
+    headingFontSize?: HeadingFontSizeConfig['headingFontSize']
+    customHeadingFontSize?: number
+    fontWeight?: 'normal' | '400' | '500' | '600' | 'bold' | '700' | '800' | '900'
+    personNameColor?: string
+  }
+  emailStyles?: {
+    fontSize?: FontSizeConfig['fontSize']
+    customFontSize?: number
+    fontWeight?: 'normal' | '400' | '500' | '600' | 'bold' | '700' | '800' | '900'
+    emailColor?: string
+  }
   spacing?: PaddingConfig & MarginConfig
 }
 
@@ -319,6 +425,20 @@ export interface IconSectionBlockType {
   iconColor?: string
   columnCount?: '1' | '2' | '3' | '4'
   gap?: number
+  titleStyles?: {
+    headingFontSize?: HeadingFontSizeConfig['headingFontSize']
+    customHeadingFontSize?: number
+    fontWeight?: 'normal' | '400' | '500' | '600' | 'bold' | '700' | '800' | '900'
+    titleColor?: string
+  }
+  descriptionStyles?: {
+    fontSize?: FontSizeConfig['fontSize']
+    customFontSize?: number
+    fontWeight?: 'normal' | '400' | '500' | '600' | 'bold' | '700' | '800' | '900'
+    lineHeight?: '1.0' | '1.2' | '1.4' | '1.5' | '1.6' | '1.8' | '2.0' | 'custom'
+    customLineHeight?: number
+    descriptionColor?: string
+  }
   spacing?: PaddingConfig & MarginConfig
 }
 
@@ -336,6 +456,20 @@ export interface FAQBlockType {
   textColor?: string
   accentColor?: string
   borderRadius?: number
+  questionStyles?: {
+    headingFontSize?: HeadingFontSizeConfig['headingFontSize']
+    customHeadingFontSize?: number
+    fontWeight?: 'normal' | '400' | '500' | '600' | 'bold' | '700' | '800' | '900'
+    questionColor?: string
+  }
+  answerStyles?: {
+    fontSize?: FontSizeConfig['fontSize']
+    customFontSize?: number
+    fontWeight?: 'normal' | '400' | '500' | '600' | 'bold' | '700' | '800' | '900'
+    lineHeight?: '1.0' | '1.2' | '1.4' | '1.5' | '1.6' | '1.8' | '2.0' | 'custom'
+    customLineHeight?: number
+    answerColor?: string
+  }
   spacing?: PaddingConfig & MarginConfig
 }
 
@@ -354,7 +488,10 @@ export interface PartnerLogosBlockType {
   textColor?: string
   maxColumns?: '2' | '3' | '4' | '5' | '6'
   gap?: number
-  logoMaxHeight?: number
+  logoStyles?: {
+    logoMaxWidth?: number
+    logoMaxHeight?: number
+  }
   spacing?: PaddingConfig & MarginConfig
 }
 
@@ -377,6 +514,98 @@ export interface StartupGridBlockType {
   gap?: number
   cardBackgroundColor?: string
   cardBorderRadius?: number
+  titleStyles?: {
+    headingFontSize?: HeadingFontSizeConfig['headingFontSize']
+    customHeadingFontSize?: number
+    fontWeight?: 'normal' | '400' | '500' | '600' | 'bold' | '700' | '800' | '900'
+    titleColor?: string
+  }
+  descriptionStyles?: {
+    fontSize?: FontSizeConfig['fontSize']
+    customFontSize?: number
+    fontWeight?: 'normal' | '400' | '500' | '600' | 'bold' | '700' | '800' | '900'
+    lineHeight?: '1.0' | '1.2' | '1.4' | '1.5' | '1.6' | '1.8' | '2.0' | 'custom'
+    customLineHeight?: number
+    descriptionColor?: string
+  }
+  logoStyles?: {
+    logoMaxWidth?: number
+    logoMaxHeight?: number
+  }
+  buttonStyles?: {
+    buttonFontSize?: 'sm' | 'base' | 'lg' | 'custom'
+    customButtonFontSize?: number
+    fontWeight?: 'normal' | '400' | '500' | '600' | 'bold' | '700' | '800' | '900'
+    buttonBackgroundColor?: string
+    buttonTextColor?: string
+  }
+  spacing?: PaddingConfig & MarginConfig
+}
+
+export interface NavigationLink {
+  label: string
+  url: string
+}
+
+export interface HeaderBlockType {
+  blockType: 'header'
+  logo?: string | number
+  siteTitle?: string
+  navigationLinks: NavigationLink[]
+  layout?: LayoutConfig['layout']
+  maxWidth?: number
+  backgroundColor?: string
+  textColor?: string
+  logoStyles?: {
+    logoMaxWidth?: number
+    logoMaxHeight?: number
+  }
+  siteTitleStyles?: {
+    headingFontSize?: HeadingFontSizeConfig['headingFontSize']
+    customHeadingFontSize?: number
+    fontWeight?: 'normal' | '400' | '500' | '600' | 'bold' | '700' | '800' | '900'
+    siteTitleColor?: string
+  }
+  navigationStyles?: {
+    fontSize?: FontSizeConfig['fontSize']
+    customFontSize?: number
+    fontWeight?: 'normal' | '400' | '500' | '600' | 'bold' | '700' | '800' | '900'
+    linkColor?: string
+    linkHoverColor?: string
+  }
+  spacing?: PaddingConfig & MarginConfig
+}
+
+export interface FooterLink {
+  label: string
+  url: string
+}
+
+export interface FooterSection {
+  title?: string
+  links: FooterLink[]
+}
+
+export interface FooterBlockType {
+  blockType: 'footer'
+  footerSections: FooterSection[]
+  layout?: LayoutConfig['layout']
+  maxWidth?: number
+  backgroundColor?: string
+  textColor?: string
+  sectionTitleStyles?: {
+    headingFontSize?: HeadingFontSizeConfig['headingFontSize']
+    customHeadingFontSize?: number
+    fontWeight?: 'normal' | '400' | '500' | '600' | 'bold' | '700' | '800' | '900'
+    sectionTitleColor?: string
+  }
+  linkStyles?: {
+    fontSize?: FontSizeConfig['fontSize']
+    customFontSize?: number
+    fontWeight?: 'normal' | '400' | '500' | '600' | 'bold' | '700' | '800' | '900'
+    linkColor?: string
+    linkHoverColor?: string
+  }
   spacing?: PaddingConfig & MarginConfig
 }
 
@@ -395,3 +624,5 @@ export type BlockType =
   | FAQBlockType
   | PartnerLogosBlockType
   | StartupGridBlockType
+  | HeaderBlockType
+  | FooterBlockType

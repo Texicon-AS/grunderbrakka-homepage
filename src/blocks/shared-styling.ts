@@ -202,3 +202,65 @@ export const headingFontSizeFields: Field[] = [
     },
   },
 ]
+
+export const fontWeightFields: Field[] = [
+  {
+    name: 'fontWeight',
+    type: 'select',
+    label: 'Font Weight',
+    options: [
+      { label: 'Normal', value: 'normal' },
+      { label: '400', value: '400' },
+      { label: '500 (Medium)', value: '500' },
+      { label: '600 (Semi Bold)', value: '600' },
+      { label: 'Bold', value: 'bold' },
+      { label: '700', value: '700' },
+      { label: '800 (Extra Bold)', value: '800' },
+      { label: '900', value: '900' },
+    ],
+    defaultValue: 'normal',
+  },
+]
+
+export const lineHeightFields: Field[] = [
+  {
+    name: 'lineHeight',
+    type: 'select',
+    label: 'Line Height',
+    options: [
+      { label: '1.0', value: '1.0' },
+      { label: '1.2', value: '1.2' },
+      { label: '1.4', value: '1.4' },
+      { label: '1.5', value: '1.5' },
+      { label: '1.6', value: '1.6' },
+      { label: '1.8', value: '1.8' },
+      { label: '2.0', value: '2.0' },
+      { label: 'Custom', value: 'custom' },
+    ],
+    defaultValue: '1.5',
+  },
+  {
+    name: 'customLineHeight',
+    type: 'number',
+    label: 'Custom Line Height',
+    admin: {
+      condition: (data) => data.lineHeight === 'custom',
+      description: 'Enter custom line height value (e.g., 1.75)',
+    },
+  },
+]
+
+export const logoConfigFields: Field[] = [
+  {
+    name: 'logoMaxWidth',
+    type: 'number',
+    label: 'Logo Max Width (px)',
+    defaultValue: 200,
+  },
+  {
+    name: 'logoMaxHeight',
+    type: 'number',
+    label: 'Logo Max Height (px)',
+    defaultValue: 100,
+  },
+]

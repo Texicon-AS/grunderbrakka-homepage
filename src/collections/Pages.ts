@@ -1,5 +1,5 @@
 import type { CollectionConfig } from 'payload'
-import { HeroBlock, DeadlineBlock, IntroBlock, ValuesBlock, LocationBlock, CtaBlock, StartupCardBlock, TestimonialBlock, ContactFormBlock, SimpleTextBlock, IconSectionBlock, FAQBlock, PartnerLogosBlock, StartupGridBlock } from '../blocks'
+import { HeroBlock, DeadlineBlock, IntroBlock, ValuesBlock, LocationBlock, CtaBlock, StartupCardBlock, TestimonialBlock, ContactFormBlock, SimpleTextBlock, IconSectionBlock, FAQBlock, PartnerLogosBlock, StartupGridBlock, HeaderBlock, FooterBlock } from '../blocks'
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
@@ -45,6 +45,8 @@ export const Pages: CollectionConfig = {
         FAQBlock,
         PartnerLogosBlock,
         StartupGridBlock,
+        HeaderBlock,
+        FooterBlock,
       ],
     },
   ],

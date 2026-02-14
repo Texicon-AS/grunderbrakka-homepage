@@ -1,5 +1,5 @@
 import type { Block } from 'payload'
-import { paddingFields, marginFields, colorFields, layoutFields } from './shared-styling'
+import { paddingFields, marginFields, colorFields, layoutFields, headingFontSizeFields, fontSizeFields, fontWeightFields, lineHeightFields } from './shared-styling'
 
 export const SimpleTextBlock: Block = {
   slug: 'simpleText',
@@ -40,6 +40,63 @@ export const SimpleTextBlock: Block = {
       fields: [
         ...layoutFields,
         ...colorFields,
+        {
+          name: 'headingStyles',
+          type: 'group',
+          label: 'Heading Styles',
+          fields: [
+            ...headingFontSizeFields,
+            ...fontWeightFields,
+            {
+              name: 'headingColor',
+              type: 'text',
+              label: 'Heading Color (hex)',
+            },
+          ],
+        },
+        {
+          name: 'bodyTextStyles',
+          type: 'group',
+          label: 'Body Text Styles',
+          fields: [
+            ...fontSizeFields,
+            ...fontWeightFields,
+            ...lineHeightFields,
+            {
+              name: 'bodyTextColor',
+              type: 'text',
+              label: 'Body Text Color (hex)',
+            },
+          ],
+        },
+        {
+          name: 'personNameStyles',
+          type: 'group',
+          label: 'Person Name Styles',
+          fields: [
+            ...headingFontSizeFields,
+            ...fontWeightFields,
+            {
+              name: 'personNameColor',
+              type: 'text',
+              label: 'Person Name Color (hex)',
+            },
+          ],
+        },
+        {
+          name: 'emailStyles',
+          type: 'group',
+          label: 'Email Styles',
+          fields: [
+            ...fontSizeFields,
+            ...fontWeightFields,
+            {
+              name: 'emailColor',
+              type: 'text',
+              label: 'Email Color (hex)',
+            },
+          ],
+        },
         {
           type: 'group',
           name: 'spacing',

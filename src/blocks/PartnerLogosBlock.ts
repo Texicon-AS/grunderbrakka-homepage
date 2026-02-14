@@ -1,5 +1,5 @@
 import type { Block } from 'payload'
-import { paddingFields, marginFields, colorFields, layoutFields } from './shared-styling'
+import { paddingFields, marginFields, colorFields, layoutFields, logoConfigFields } from './shared-styling'
 
 export const PartnerLogosBlock: Block = {
   slug: 'partnerLogos',
@@ -59,10 +59,12 @@ export const PartnerLogosBlock: Block = {
           defaultValue: 24,
         },
         {
-          name: 'logoMaxHeight',
-          type: 'number',
-          label: 'Logo Max Height (px)',
-          defaultValue: 100,
+          name: 'logoStyles',
+          type: 'group',
+          label: 'Logo Styles',
+          fields: [
+            ...logoConfigFields,
+          ],
         },
         {
           type: 'group',
