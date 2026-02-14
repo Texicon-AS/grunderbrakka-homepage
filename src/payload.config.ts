@@ -9,6 +9,7 @@ import { Location } from './collections/Location'
 import { Application } from './collections/Application'
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
+import { Pages } from './collections/Pages'
 import { Settings } from './globals/Settings'
 
 export default buildConfig({
@@ -18,6 +19,7 @@ export default buildConfig({
   collections: [
     Users,
     Media,
+    Pages,
     Hero,
     About,
     Location,

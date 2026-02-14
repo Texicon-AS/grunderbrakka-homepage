@@ -1,0 +1,6 @@
+export { HeroBlock } from './HeroBlock'
+export { DeadlineBlock } from './DeadlineBlock'
+export { IntroBlock } from './IntroBlock'
+export { ValuesBlock } from './ValuesBlock'
+export { LocationBlock } from './LocationBlock'
+export { CtaBlock } from './CtaBlock'
