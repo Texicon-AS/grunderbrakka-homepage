@@ -1,0 +1,59 @@
+import type { Block } from 'payload'
+import { paddingFields, marginFields, colorFields, layoutFields } from './shared-styling'
+
+export const TestimonialBlock: Block = {
+  slug: 'testimonial',
+  labels: {
+    singular: 'Testimonial Block',
+    plural: 'Testimonial Blocks',
+  },
+  fields: [
+    {
+      name: 'quote',
+      type: 'textarea',
+      label: 'Quote Text',
+      required: true,
+    },
+    {
+      name: 'founderName',
+      type: 'text',
+      label: 'Founder Name',
+      required: true,
+    },
+    {
+      name: 'founderTitle',
+      type: 'text',
+      label: 'Founder Title',
+    },
+    {
+      name: 'educationDetails',
+      type: 'textarea',
+      label: 'Education Details',
+    },
+    {
+      type: 'collapsible',
+      label: 'Styling',
+      fields: [
+        ...layoutFields,
+        ...colorFields,
+        {
+          name: 'quoteColor',
+          type: 'text',
+          label: 'Quote Color (hex)',
+          admin: {
+            description: 'Color for quote mark/accent',
+          },
+        },
+        {
+          type: 'group',
+          name: 'spacing',
+          label: 'Spacing',
+          fields: [
+            ...paddingFields,
+            ...marginFields,
+          ],
+        },
+      ],
+    },
+  ],
+}

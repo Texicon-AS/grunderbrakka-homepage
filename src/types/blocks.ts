@@ -246,6 +246,140 @@ export interface CtaBlockType {
   spacing?: PaddingConfig & MarginConfig
 }
 
+export interface StartupCardBlockType {
+  blockType: 'startupCard'
+  startupTitle: string
+  description: string
+  logo?: string | number
+  contactUrl?: string
+  buttonText?: string
+  layout?: LayoutConfig['layout']
+  maxWidth?: number
+  backgroundColor?: string
+  textColor?: string
+  borderRadius?: number
+  hoverEffect?: 'none' | 'scale' | 'shadow' | 'lift'
+  spacing?: PaddingConfig & MarginConfig
+}
+
+export interface TestimonialBlockType {
+  blockType: 'testimonial'
+  quote: string
+  founderName: string
+  founderTitle?: string
+  educationDetails?: string
+  layout?: LayoutConfig['layout']
+  maxWidth?: number
+  backgroundColor?: string
+  textColor?: string
+  quoteColor?: string
+  spacing?: PaddingConfig & MarginConfig
+}
+
+export interface ContactFormBlockType {
+  blockType: 'contactForm'
+  formTitle?: string
+  formDescription?: string
+  submitButtonText?: string
+  layout?: LayoutConfig['layout']
+  maxWidth?: number
+  formBackgroundColor?: string
+  buttonColor?: string
+  inputBorderColor?: string
+  spacing?: PaddingConfig & MarginConfig
+}
+
+export interface SimpleTextBlockType {
+  blockType: 'simpleText'
+  heading?: string
+  bodyText?: string
+  personName?: string
+  contactEmail?: string
+  image?: string | number
+  layout?: LayoutConfig['layout']
+  maxWidth?: number
+  backgroundColor?: string
+  textColor?: string
+  spacing?: PaddingConfig & MarginConfig
+}
+
+export interface IconSectionItem {
+  icon?: string | number
+  title: string
+  description: string
+}
+
+export interface IconSectionBlockType {
+  blockType: 'iconSection'
+  sections: IconSectionItem[]
+  layout?: LayoutConfig['layout']
+  maxWidth?: number
+  backgroundColor?: string
+  textColor?: string
+  iconColor?: string
+  columnCount?: '1' | '2' | '3' | '4'
+  gap?: number
+  spacing?: PaddingConfig & MarginConfig
+}
+
+export interface FAQItem {
+  question: string
+  answer: string
+}
+
+export interface FAQBlockType {
+  blockType: 'faq'
+  questions: FAQItem[]
+  layout?: LayoutConfig['layout']
+  maxWidth?: number
+  backgroundColor?: string
+  textColor?: string
+  accentColor?: string
+  borderRadius?: number
+  spacing?: PaddingConfig & MarginConfig
+}
+
+export interface PartnerLogoItem {
+  logo: string | number
+  name?: string
+  url?: string
+}
+
+export interface PartnerLogosBlockType {
+  blockType: 'partnerLogos'
+  partners: PartnerLogoItem[]
+  layout?: LayoutConfig['layout']
+  maxWidth?: number
+  backgroundColor?: string
+  textColor?: string
+  maxColumns?: '2' | '3' | '4' | '5' | '6'
+  gap?: number
+  logoMaxHeight?: number
+  spacing?: PaddingConfig & MarginConfig
+}
+
+export interface StartupGridItem {
+  title: string
+  description?: string
+  logo?: string | number
+  url?: string
+  buttonText?: string
+}
+
+export interface StartupGridBlockType {
+  blockType: 'startupGrid'
+  startups: StartupGridItem[]
+  layout?: LayoutConfig['layout']
+  maxWidth?: number
+  backgroundColor?: string
+  textColor?: string
+  columnCount?: '1' | '2' | '3' | '4'
+  gap?: number
+  cardBackgroundColor?: string
+  cardBorderRadius?: number
+  spacing?: PaddingConfig & MarginConfig
+}
+
 export type BlockType =
   | HeroBlockType
   | DeadlineBlockType
@@ -253,3 +387,11 @@ export type BlockType =
   | ValuesBlockType
   | LocationBlockType
   | CtaBlockType
+  | StartupCardBlockType
+  | TestimonialBlockType
+  | ContactFormBlockType
+  | SimpleTextBlockType
+  | IconSectionBlockType
+  | FAQBlockType
+  | PartnerLogosBlockType
+  | StartupGridBlockType
